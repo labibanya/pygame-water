@@ -82,6 +82,7 @@ BLOCKS = {'O': O_BLOCK,
           'S': S_BLOCK,
           'J': J_BLOCK}
 
+
 """
 从BLOCKS字典中随机选择一个块并返回。
 
@@ -91,8 +92,6 @@ BLOCKS = {'O': O_BLOCK,
 返回值:
        从BLOCKS字典中随机选择的一个块。
 """
-
-
 def get_block():
     block_name = random.choice('OIZTLSJ')
     b = BLOCKS[block_name]
@@ -101,5 +100,15 @@ def get_block():
 
 
 def get_next_block(block):
+    """
+    获取下一个方块。
+    
+    参数:
+        block (str): 当前方块的名称。
+    
+    返回值:
+        str: 下一个方块的名称。
+    """
     b = BLOCKS[block.name]
     return b[block.next]
+
