@@ -82,6 +82,16 @@ BLOCKS = {'O': O_BLOCK,
           'S': S_BLOCK,
           'J': J_BLOCK}
 
+"""
+从BLOCKS字典中随机选择一个块并返回。
+
+参数:
+       无
+
+返回值:
+       从BLOCKS字典中随机选择的一个块。
+"""
+
 
 def get_block():
     block_name = random.choice('OIZTLSJ')
